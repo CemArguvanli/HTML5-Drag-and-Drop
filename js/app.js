@@ -1,4 +1,10 @@
 
+/**
+*
+* javaScript drag and drop
+*
+*/
+
 window.addEventListener("load", setDrag, false);
 
 function setDrag(){
@@ -33,3 +39,19 @@ function cancel(e){
 	}
 	return false;
 }
+
+
+/**
+*
+* jQueryUI drag and drop
+*
+*/
+$(document).ready(function() {
+	$("#dexter").draggable();
+
+	$(".box").droppable({
+		drop: function(event, ui){
+			$(this).css('border', '3px dotted red');
+		}
+	});
+});
